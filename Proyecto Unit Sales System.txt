@@ -1,0 +1,48 @@
+Algoritmo Unit_Sales_System
+	Definir   ValorArt  Como Real
+	Definir   ITBIS   Como Real
+	Definir   Contador   Como Entero
+	Definir   CantidaddeCompra   Como Real
+	Definir    TotalArt     Como Entero
+	Definir   Desc   Como real
+	Definir ValorDesc   como real
+	Definir TotalDesc  como real
+	Definir  SubTotal  Como real
+	Definir    SubTotaldeCompra   Como Real
+	definir   TotalCompra       Como Real
+	Definir   N   Como Entero
+	Escribir "La Cantidad de Articulos"
+	Leer N
+	Contador=0
+	TotalDesc=0
+	TotalArt=0
+	TotalCompra=0
+	
+
+	
+	Mientras Contador<N
+		Escribir  "-Digite el Valor de la Unidad" "(RD$)"
+		Leer ValorArt
+		Escribir "Digite la cantidad de Unidades"
+		Leer  CantidaddeCompra
+		SubTotal= ValorArt*CantidaddeCompra
+		Escribir   "Ingrese el Descuento"  "(%)"
+		Leer Desc
+		ValorDesc=SubTotal*Desc/100
+		SubTotaldeCompra= SubTotal-ValorDesc
+		Escribir "El Descuento Es ",ValorDesc
+		Escribir "El Subtotal es ",SubTotaldeCompra
+		TotalArt=TotalArt+CantidaddeCompra
+		TotalDesc= TotalDesc+ValorDesc
+		ITBIS= SubTotaldeCompra*18/100
+		TotalCompra= SubTotal+SubTotaldeCompra+ITBIS
+		Contador=Contador+1
+		
+	FinMientras
+	Escribir "Numero de Articulos ", TotalArt
+	Escribir "Total de Ventas " "RD$ ",  TotalCompra
+	Escribir "Total de Descuento ", TotalDesc "RD$"
+	Escribir "ITBIS ", ITBIS
+	Escribir "IMPUSTOS INCLUIDOS"
+	
+FinAlgoritmo
